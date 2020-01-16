@@ -8,7 +8,7 @@ export const listRoster = roster => {
 
 export const fetchRoster = id => {
     return (dispatch) => {
-        return fetch(`https://statsapi.web.nhl.com/api/v1/teams/${id}/roster`)
+        return fetch(`https://statsapi.web.nhl.com/api/v1/teams/${id}?expand=team.roster`)
         .then(r => r.json())
         .then(roster => {
             console.log(roster)
