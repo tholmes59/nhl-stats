@@ -1,12 +1,37 @@
 import React from 'react';
 import './App.css';
+import { fetchTeams } from './actions/teams.js';
+import { connect } from 'react-redux';
+import Teams from './components/Teams'
+import Roster from './components/Roster'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <h1>NHL Stats</h1>
-    </div>
-  );
+
+class App extends React.Component {
+
+  componentDidMount() {
+    this.props.fetchTeams()
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <h1>NHL Stats</h1>
+        <Router>
+          <Route exact path="/" render={props => <Teams key={this.props.teams && this.props.teams.id} teams={this.props.teams}/>} />
+          <Route exact path="/roster" render={props => <Roster key={this.props.roster && this.props.roster.id} roster={this.props.roster} teams={this.props.teams}/>} />
+        </Router>
+        {/* <Teams tteams={this.props.teams}/> */}
+      </div>
+    );
+  }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    teams: state.teams,
+    roster: state.roster
+  }
+}
+
+export default connect(mapStateToProps, {fetchTeams})(App);
