@@ -3,8 +3,7 @@ import { connect } from 'react-redux'
 import RosterCard from './RosterCard'
 
 const Roster = (props) => {
-
-    const rosterCards = props.roster.roster && props.roster.roster.map(player => <RosterCard key={player.id} player={player} />)
+    const rosterCards = props.roster.teams && props.roster.teams.map(player => <RosterCard key={player.id} player={player} />)
     return (
         <div>
             {rosterCards}
