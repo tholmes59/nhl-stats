@@ -1,10 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import TeamCard from './TeamCard'
+import TeamsCard from './TeamsCard'
 
 const Teams = (props) => {
-
-    const teamCards = props.teams.teams && props.teams.teams.map(team => <TeamCard key={team.id} team={team} />)
+    const teamCards = props.teams.teams && props.teams.teams.map(team => <TeamsCard key={team.id} team={team} />)
     return (
         <div>
             {teamCards}
