@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import { fetchPlayerStats } from '../actions/player';
+import { fetchPlayerStats } from '../actions/stats';
 import Stats from './Stats'
 
 
@@ -18,6 +18,7 @@ class PlayerCard extends React.Component {
                <p>{this.props.player.fullName} {this.props.player.primaryNumber}</p>
                <p>{this.props.player.currentTeam.name}</p>
                 <button type="button" onClick={this.handleClick}>See Stats</button>
+                
                 <Stats />
             </div>
         )
