@@ -21,7 +21,7 @@ class App extends React.Component {
         <Router>
           <Route exact path="/" render={props => <Teams key={this.props.teams && this.props.teams.id} teams={this.props.teams}/>} />
           <Route exact path="/roster" render={props => <Roster key={this.props.roster && this.props.roster.id} roster={this.props.roster} teams={this.props.teams}/>} />
-          <Route path="/player" component={Player} />
+          <Route exact path="/player" render={props => <Player key={this.props.player && this.props.player.id} player={this.props.player} stats={this.props.stats}/>}/>
         </Router>
         {/* <Teams tteams={this.props.teams}/> */}
       </div>
@@ -32,7 +32,9 @@ class App extends React.Component {
 const mapStateToProps = state => {
   return {
     teams: state.teams,
-    roster: state.roster
+    roster: state.roster,
+    player: state.player,
+    stats: state.stats
   }
 }
 
