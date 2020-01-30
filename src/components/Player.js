@@ -12,6 +12,7 @@ const Player = (props) => {
                 <tr>
                     <th>Season</th>
                     <th>Team</th>
+                    <th>Games</th>
                     <th>Goals</th>
                     <th>Assists</th>
                     <th>Points</th>
@@ -19,6 +20,7 @@ const Player = (props) => {
                 <tr>
                     <td>{props.stats.stats && props.stats.stats.map(val => val.splits.map(yr => <p>{yr.season}</p>))}</td>
                     <td>{props.stats.stats && props.stats.stats.map(val => val.splits.map(yr => <p>{yr.team.name}</p>))}</td>
+                    <td>{props.stats.stats && props.stats.stats.map(val => val.splits.map(yr => <p>{yr.stat.games}</p>))}</td>
                     <td>{props.stats.stats && props.stats.stats.map(val => val.splits.map(yr => <p>{yr.stat.goals}</p>))}</td>
                     <td>{props.stats.stats && props.stats.stats.map(val => val.splits.map(yr => <p>{yr.stat.assists}</p>))}</td>
                     <td>{props.stats.stats && props.stats.stats.map(val => val.splits.map(yr => <p>{yr.stat.points}</p>))}</td>
