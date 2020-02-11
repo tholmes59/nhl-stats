@@ -12,14 +12,15 @@ class PlayerCard extends React.Component {
     }
 
     render () {
-        console.log(this.props.stats)
+        console.log(this.props.player)
         return (
             <div>
                <p>{this.props.player.fullName} {this.props.player.primaryNumber}</p>
                <p>{this.props.player.currentTeam.name}</p>
+               {/* <p>{this.props.stats.stats && this.props.stats.stats.type.displayName}</p> */}
                 <button type="button" onClick={this.handleClick}>See Stats</button>
                 
-                <Stats />
+                {/* <Stats props={this.props.stats}/> */}
             </div>
         )
     }
