@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { fetchPlayer } from '../actions/player'
 import { fetchPlayerStats } from '../actions/stats'
 
+
 class RosterCard extends React.Component {
 
     handleClick = event => {
@@ -13,10 +14,16 @@ class RosterCard extends React.Component {
     }
 
     render () {
+        const playerButton = {
+            border: 'none'
+        }
         return (
             <div>
                 <p>{this.props.player.name}</p>
-                {this.props.player.roster.roster.map((item, id) => <p key={id}>#{item.jerseyNumber} <button type="button" onClick={this.handleClick}><Link key={item.person.id} id={item.person.id} to={'/player'}  >{item.person.fullName}</Link> </button>- {item.position.abbreviation}</p>)}
+                {this.props.player.roster.roster.map((item, id) => 
+                <p key={id}>#{item.jerseyNumber} 
+                <button type="button" style={playerButton} onClick={this.handleClick}><Link key={item.person.id} id={item.person.id} to={'/player'}  >{item.person.fullName}</Link> </button>
+                - {item.position.abbreviation}</p>)}
                 
             </div>
         )
