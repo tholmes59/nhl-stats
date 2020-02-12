@@ -17,7 +17,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>NHL Stats</h1>
         <Router>
           <Route exact path="/" render={props => <Teams key={this.props.teams && this.props.teams.id} teams={this.props.teams}/>} />
           <Route exact path="/roster" render={props => <Roster key={this.props.roster && this.props.roster.id} roster={this.props.roster} teams={this.props.teams}/>} />

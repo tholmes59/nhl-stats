@@ -14,33 +14,30 @@ class TeamsCard extends React.Component {
 
     render () {
         const cardStyle = {
-            width: '18rem',
-            padding: '1rem',
-            margin: '1rem'
+            width: '20rem',
+            padding: '.2rem',
+            margin: '.5rem'
         }
         const linkStyle = {
             color: 'white',
             textDecoration: 'none'
         }
+        const buttonStyle = {
+            width: '10rem',
+            margin: '.5rem'
+        }
         return (
             <div>
-               
-                        <Card style={cardStyle}>
-                            <Card.Body>
-                                <Card.Title>{this.props.team.name}</Card.Title>
-                            </Card.Body>
-                            <Button varient="primary" onClick={this.handleClick}><Link style={linkStyle} to={`/roster`}>View Roster</Link></Button>
-                        </Card>
-                   
-                {/* <Card style={{ width: '18rem' }}>
+                <Card style={cardStyle}>
                     <Card.Body>
                         <Card.Title>{this.props.team.name}</Card.Title>
+                        <Card.Text>Conference: {this.props.team.conference.name}</Card.Text>
+                        <Card.Text>Division: {this.props.team.division.name}</Card.Text>
+                        <Card.Text>Stadium: {this.props.team.venue.name} - {this.props.team.venue.city}</Card.Text>
+                        <Card.Text>Inception: {this.props.team.firstYearOfPlay}</Card.Text>
                     </Card.Body>
-                    <Button varient="primary" onClick={this.handleClick}><Link className="linkbutton" to={`/roster`}>View Roster</Link></Button>
-                </Card> */}
-                {/* <p>
-                    {this.props.team.name}   <button type="button" onClick={this.handleClick}><Link className="linkbutton" to={`/roster`}>View Roster</Link></button>
-                </p> */}
+                    <Button varient="primary" size="lg" style={buttonStyle} onClick={this.handleClick}><Link style={linkStyle} to={`/roster`}>View Roster</Link></Button>
+                </Card>
             </div>
         )
     }
