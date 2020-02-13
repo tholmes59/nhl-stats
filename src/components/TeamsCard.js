@@ -24,7 +24,8 @@ class TeamsCard extends React.Component {
         }
         const buttonStyle = {
             width: '10rem',
-            margin: '.5rem'
+            margin: '.5rem',
+            backgroundColor: '#F86D02'
         }
         return (
             <div>
