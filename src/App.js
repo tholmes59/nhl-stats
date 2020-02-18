@@ -1,11 +1,11 @@
 import React from 'react';
-import './App.css';
 import { fetchTeams } from './actions/teams.js';
 import { connect } from 'react-redux';
 import Teams from './components/Teams'
 import Roster from './components/Roster'
 import Player from './components/Player'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
+import './App.css';
 
 
 class App extends React.Component {
