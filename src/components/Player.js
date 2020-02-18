@@ -5,17 +5,25 @@ import Table from 'react-bootstrap/Table';
 
 const Player = (props) => {
 
+    const playerStyle = {
+        fontFamily: 'Sintony',
+        fontSize: '2vw',
+        margin: '1rem'
+    }
     const tableStyle = {
-            fontSize: '1.5vw'
+            fontSize: '1.2vw',
+            margin: '1rem',
     }
    
     return (
         <div>
-            <p>{props.player.people && props.player.people.map(name => name.fullName)} #{props.player.people && props.player.people.map(name => name.primaryNumber)}</p>
-            <p>{props.player.people && props.player.people.map(name => name.currentTeam.name)}</p>
-            <p>{props.player.people && props.player.people.map(ht => ht.height)}   {props.player.people && props.player.people.map(wt => wt.weight)}lbs</p>
-            <p>DOB: {props.player.people && props.player.people.map(bd => bd.birthDate)}  Age: {props.player.people && props.player.people.map(age => age.currentAge)}</p>
-            <Table bordered responsive hover style={tableStyle}>
+            <div style={playerStyle}>
+                <p>{props.player.people && props.player.people.map(name => name.fullName)} #{props.player.people && props.player.people.map(name => name.primaryNumber)}</p>
+                <p>{props.player.people && props.player.people.map(name => name.currentTeam.name)}</p>
+                <p>{props.player.people && props.player.people.map(ht => ht.height)}   {props.player.people && props.player.people.map(wt => wt.weight)}lbs</p>
+                <p>DOB: {props.player.people && props.player.people.map(bd => bd.birthDate)}  Age: {props.player.people && props.player.people.map(age => age.currentAge)}</p>
+            </div>
+            <Table responsive bordered hover style={tableStyle} >
                 <thead>
                     <tr>
                         <th>Season</th>
