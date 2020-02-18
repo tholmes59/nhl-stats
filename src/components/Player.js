@@ -4,6 +4,10 @@ import Table from 'react-bootstrap/Table';
 
 
 const Player = (props) => {
+
+    const tableStyle = {
+            fontSize: '1.5vw'
+    }
    
     return (
         <div>
@@ -11,7 +15,7 @@ const Player = (props) => {
             <p>{props.player.people && props.player.people.map(name => name.currentTeam.name)}</p>
             <p>{props.player.people && props.player.people.map(ht => ht.height)}   {props.player.people && props.player.people.map(wt => wt.weight)}lbs</p>
             <p>DOB: {props.player.people && props.player.people.map(bd => bd.birthDate)}  Age: {props.player.people && props.player.people.map(age => age.currentAge)}</p>
-            <Table bordered responsive >
+            <Table bordered responsive hover style={tableStyle}>
                 <thead>
                     <tr>
                         <th>Season</th>
@@ -32,7 +36,7 @@ const Player = (props) => {
                         <td>{props.stats.stats && props.stats.stats.map(val => val.splits.map(yr => <p>{yr.stat.points}</p>))}</td>
                     </tr> */}
                     {props.stats.stats && props.stats.stats.map(val => (val.splits.map(yr => (<tr>
-                        <td>{yr.season}</td>
+                        <td>{yr.season.slice(0, 4) + '-' + yr.season.slice(4,8)}</td>
                         <td>{yr.team.name}</td>
                         <td>{yr.stat.games}</td>
                         <td>{yr.stat.goals}</td>
