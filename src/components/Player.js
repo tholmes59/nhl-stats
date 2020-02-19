@@ -5,6 +5,12 @@ import Table from 'react-bootstrap/Table';
 
 const Player = (props) => {
 
+    const headingStyle = {
+        margin: '1rem',
+        paddingTop: '.5rem',
+        paddingBottom: '.5rem'
+    }
+
     const playerStyle = {
         fontFamily: 'Sintony',
         fontSize: '2vw',
@@ -17,6 +23,9 @@ const Player = (props) => {
    
     return (
         <div>
+            <div style={headingStyle}>
+                <h1>Statistics</h1>
+            </div>
             <div style={playerStyle}>
                 <p>{props.player.people && props.player.people.map(name => name.fullName)} #{props.player.people && props.player.people.map(name => name.primaryNumber)}</p>
                 <p>{props.player.people && props.player.people.map(name => name.currentTeam.name)}</p>
