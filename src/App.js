@@ -6,6 +6,7 @@ import Roster from './components/Roster'
 import Player from './components/Player'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.css';
+import NavBar from './components/NavBar.js';
 
 
 class App extends React.Component {
@@ -17,6 +18,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <NavBar />
         <Router>
           <Route exact path="/" render={props => <Teams key={this.props.teams && this.props.teams.id} teams={this.props.teams}/>} />
           <Route exact path="/roster" render={props => <Roster key={this.props.roster && this.props.roster.id} roster={this.props.roster} teams={this.props.teams}/>} />
