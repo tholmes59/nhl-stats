@@ -14,17 +14,31 @@ class RosterCard extends React.Component {
     }
 
     render () {
+        const headingStyle = {
+            margin: '1rem',
+            paddingTop: '.5rem',
+            paddingBottom: '.5rem'
+        }
+        const playerStyle = {
+        fontFamily: 'Sintony',
+        fontSize: '2vmin',
+        margin: '1rem'
+    }
         const playerButton = {
-            border: 'none'
+            border: 'none',
+            background: 'none'
         }
         return (
             <div>
-                <p>{this.props.player.name}</p>
-                {this.props.player.roster.roster.map((item, id) => 
-                <p key={id}>#{item.jerseyNumber} 
-                <button type="button" style={playerButton} onClick={this.handleClick}><Link key={item.person.id} id={item.person.id} to={'/player'}  >{item.person.fullName}</Link> </button>
-                - {item.position.abbreviation}</p>)}
-                
+                <div style={headingStyle}>
+                    <h1>{this.props.player.name}</h1>
+                </div>
+                <div style={playerStyle}>
+                    {this.props.player.roster.roster.map((item, id) => 
+                    <p key={id}>#{item.jerseyNumber} 
+                    <button type="button" style={playerButton} onClick={this.handleClick}><Link key={item.person.id} id={item.person.id} to={'/player'}  >{item.person.fullName}</Link> </button>
+                    - {item.position.abbreviation}</p>)}
+                </div>
             </div>
         )
     }
