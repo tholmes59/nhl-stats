@@ -3,15 +3,22 @@ import { connect } from 'react-redux'
 import TeamsCard from './TeamsCard'
 
 const Teams = (props) => {
+
+    const pageLayout = {
+        margin: '10px'
+    }
     const gridLayout = {
         display: 'grid',
-        gridTemplateColumns: 'repeat(3, 1fr)',
-        gridTemplateRows: 'repeat(3, 1fr)'
+        gridTemplateColumns: 'repeat(auto-fit, minmax(20rem, 1fr))',
+        gridGap: '10px',
+        margin: '10px 10px'
     }
     const teamCards = props.teams.teams && props.teams.teams.map(team => <TeamsCard key={team.id} team={team} />)
     return (
-        <div style={gridLayout}>
-            {teamCards}
+        <div style={pageLayout}>
+            <div style={gridLayout}>
+                {teamCards}
+            </div>
         </div>
     )
 }
