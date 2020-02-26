@@ -7,7 +7,7 @@ import Player from './components/Player'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.css';
 import NavBar from './components/NavBar.js';
-
+import Footer from './components/Footer'
 
 class App extends React.Component {
 
@@ -25,6 +25,7 @@ class App extends React.Component {
           <Route exact path="/player" render={props => <Player key={this.props.player && this.props.player.id} player={this.props.player} stats={this.props.stats}/>}/>
         </Router>
         {/* <Teams tteams={this.props.teams}/> */}
+        <Footer />
       </div>
     );
   }
