@@ -8,6 +8,11 @@ body {
   font-family: 'Sintony', sans-serif !important;
 }
 
+.App {
+  position: relative;
+  min-height: 100vh;
+}
+
 /* .App {
   text-align: left;
   margin: 30px;
