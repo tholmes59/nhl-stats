@@ -3,14 +3,14 @@ import React from 'react'
 const Footer = () => {
 
     const footerStyle = {
-        position: 'float',
+        position: 'absolute',
         left: '0',
         bottom: '0',
         width: '100%',
         backgroundColor: 'black',
         color: 'white',
         textAlign: 'center',
-        // height: '-40px',
+        height: '2.5rem',
         marginTop: '5px'
     }
     return (
