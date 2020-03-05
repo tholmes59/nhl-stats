@@ -5,28 +5,32 @@ import Table from 'react-bootstrap/Table';
 
 const Player = (props) => {
 
+    const playerStyle = {
+        paddingBottom: '2.5rem'
+    }
+
     const headingStyle = {
         margin: '1rem',
         paddingTop: '.5rem',
         paddingBottom: '.5rem'
     }
 
-    const playerStyle = {
+    const playerProfileStyle = {
         fontFamily: 'Sintony',
         fontSize: '2vw',
         margin: '1rem'
     }
     const tableStyle = {
             fontSize: '1.2vw',
-            margin: '1rem',
+            margin: '1rem'
     }
    
     return (
-        <div>
+        <div style={playerStyle}>
             <div style={headingStyle}>
                 <h1>Statistics</h1>
             </div>
-            <div style={playerStyle}>
+            <div style={playerProfileStyle}>
                 <p>{props.player.people && props.player.people.map(name => name.fullName)} #{props.player.people && props.player.people.map(name => name.primaryNumber)}</p>
                 <p>{props.player.people && props.player.people.map(name => name.currentTeam.name)}</p>
                 <p>{props.player.people && props.player.people.map(ht => ht.height)}   {props.player.people && props.player.people.map(wt => wt.weight)}lbs</p>
