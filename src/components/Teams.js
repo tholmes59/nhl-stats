@@ -5,7 +5,8 @@ import TeamsCard from './TeamsCard'
 const Teams = (props) => {
 
     const pageLayout = {
-        margin: '10px'
+        // margin: '10px',
+        paddingBottom: '2.5rem'
     }
     const gridLayout = {
         display: 'grid',
