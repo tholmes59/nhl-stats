@@ -11,11 +11,19 @@ const Footer = () => {
         color: 'white',
         textAlign: 'center',
         height: '2.5rem',
-        marginTop: '5px'
+        marginTop: '5px',
+        fontSize: '1vmin'
+    }
+
+    const getYear = () => {
+        return new Date().getFullYear()
     }
     return (
         <div style={footerStyle}>
-            <p>Footer</p>
+            <span>
+                {getYear()} NHL Stats by Tom Holmes<br/>
+                "NHL and the NHL Shield are registered trademarks of the National Hockey League. NHL and NHL team marks are the property of the NHL and its teams. © NHL 2020. All Rights Reserved."
+            </span>
         </div>
     )
 }
