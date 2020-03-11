@@ -6,7 +6,7 @@ const Teams = (props) => {
 
     const pageLayout = {
         // margin: '10px',
-        paddingBottom: '2.5rem'
+        paddingBottom: '3rem'
     }
     const gridLayout = {
         display: 'grid',
