@@ -10,7 +10,7 @@ const Footer = () => {
         backgroundColor: 'black',
         color: 'white',
         textAlign: 'center',
-        height: '2.5rem',
+        height: '3rem',
         marginTop: '5px',
         fontSize: '1vmin'
     }
