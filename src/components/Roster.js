@@ -5,7 +5,7 @@ import RosterCard from './RosterCard'
 const Roster = (props) => {
     const rosterCards = props.roster.teams && props.roster.teams.map(player => <RosterCard key={player.id} player={player} />)
     const rosterStyle = {
-        paddingBottom: '2.5rem'
+        paddingBottom: '3rem'
     }
     return (
         <div style={rosterStyle}>
