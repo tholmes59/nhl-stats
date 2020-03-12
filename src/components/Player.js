@@ -6,7 +6,7 @@ import Table from 'react-bootstrap/Table';
 const Player = (props) => {
 
     const playerStyle = {
-        paddingBottom: '2.5rem'
+        paddingBottom: '3rem'
     }
 
     const headingStyle = {
