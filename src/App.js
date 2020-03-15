@@ -7,7 +7,8 @@ import Player from './components/Player'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.css';
 import NavBar from './components/NavBar.js';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
+import Home from './components/Home'
 
 class App extends React.Component {
 
@@ -20,7 +21,8 @@ class App extends React.Component {
       <div className="App">
         <NavBar />
         <Router>
-          <Route exact path="/" render={props => <Teams key={this.props.teams && this.props.teams.id} teams={this.props.teams}/>} />
+          <Route exact path="/"><Home /></Route>
+          <Route exact path="/teams" render={props => <Teams key={this.props.teams && this.props.teams.id} teams={this.props.teams}/>} />
           <Route exact path="/roster" render={props => <Roster key={this.props.roster && this.props.roster.id} roster={this.props.roster} teams={this.props.teams}/>} />
           <Route exact path="/player" render={props => <Player key={this.props.player && this.props.player.id} player={this.props.player} stats={this.props.stats}/>}/>
         </Router>
