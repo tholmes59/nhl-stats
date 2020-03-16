@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <div>
            <h1>Welcome to NHL Stats!</h1> 
-            <button type="button"><Link to={'/teams'}></Link></button>
+            <button type="button"><Link to={'/teams'}>Teams</Link></button>
         </div>
     ) 
 }
