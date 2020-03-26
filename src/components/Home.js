@@ -24,18 +24,25 @@ const Home = () => {
     }
 
     const heading = {
-        color: 'white'
+        color: 'white',
+        fontSize: '2vw'
     }
 
     const des = {
-        color: 'white'
+        color: 'white',
+        fontSize: '1vw'
+    }
+
+    const button = {
+        backgroundColor: 'transparent',
+        padding: '.5vw 1vh',
+        borderRadius: '5px',
+        border: 'solid #404040 .5px'
     }
 
     const btn = {
-        // position: 'absolute',
-        // top: '50%',
-        // left: '80%'
-        textDecoration: 'none'
+        textDecoration: 'none',
+        fontSize: '1.2vw'
     }
 
     return (
@@ -44,7 +51,8 @@ const Home = () => {
             <div style={contentContainer}>
                 <h2 style={heading}>Welcome to NHL Stats!</h2> 
                 <p style={des}>View your favorite teams roster and see the stats of all your favorite players</p>
-                <Button type="button" variant="outline-dark" ><Link to={'/teams'} style={btn}> View Teams</Link></Button>
+                <button type="button" variant="outline-dark" style={button}><Link to={'/teams'} style={btn}> View Teams</Link></button>
+                {/* <Button type="button" variant="outline-dark" ><Link to={'/teams'} style={btn}> View Teams</Link></Button> */}
             </div>
         </div>
     ) 
