@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Button from 'react-bootstrap/Button'
 
 
 const Home = () => {
@@ -34,6 +35,7 @@ const Home = () => {
         // position: 'absolute',
         // top: '50%',
         // left: '80%'
+        textDecoration: 'none'
     }
 
     return (
@@ -42,7 +44,7 @@ const Home = () => {
             <div style={contentContainer}>
                 <h2 style={heading}>Welcome to NHL Stats!</h2> 
                 <p style={des}>View your favorite teams roster and see the stats of all your favorite players</p>
-                <button type="button" style={btn}><Link to={'/teams'}> View Teams</Link></button>
+                <Button type="button" variant="outline-dark" ><Link to={'/teams'} style={btn}> View Teams</Link></Button>
             </div>
         </div>
     ) 
