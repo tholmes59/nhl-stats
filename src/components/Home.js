@@ -6,26 +6,28 @@ const Home = () => {
 
     const homeContainer = {
         position: 'relative',
-        width: '100%'
+        // maxWidth: '100%'
+        // backgroundSize: 'cover'
     }
 
     const img = {
         minHeight: '100vh',
-        // width: '100%',
-        // height: 'auto'
+        objectFit: 'cover',
+        maxWidth: '100%',
+        // height: '100vh'
     }
 
     const heading = {
         position: 'absolute',
-        top: '70%',
-        left: '20%',
+        top: '40%',
+        left: '80%',
         color: 'white'
     }
 
     const btn = {
         position: 'absolute',
-        top: '80%',
-        left: '20%'
+        top: '50%',
+        left: '80%'
     }
 
     return (
