@@ -68,7 +68,8 @@ const NavBar = () => {
         <nav style={navBar}>
             <p style={logo}><img src={require("../assets/nhl.jpg")} alt="NHL Logo" style={img}/></p>
             <ul style={navLinks}>
-               <li ><a href="/" style={navItem}>Home </a></li> 
+              <li ><a href="/teams" style={navItem}>Teams</a></li> 
+              <li ><a href="/" style={navItem}>Home </a></li> 
             </ul>
         </nav>
     )
