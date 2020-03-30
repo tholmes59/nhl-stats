@@ -39,6 +39,10 @@ const Player = (props) => {
             <Table responsive bordered hover style={tableStyle} >
                 <thead>
                     <tr>
+                        <th colspan="3"></th>
+                        <th colspan="4">Position Player</th>
+                    </tr>
+                    <tr>
                         <th>Season</th>
                         <th>Team</th>
                         <th>Games</th>
