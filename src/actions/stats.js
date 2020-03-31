@@ -11,7 +11,7 @@ export const fetchPlayerStats = id => {
         return fetch(`https://statsapi.web.nhl.com/api/v1/people/${id}/stats?stats=yearByYear`)
         .then(r => r.json())
         .then(stats => {
-            console.log(stats)
+            // console.log(stats)
             if (stats.error) {
                 alert(stats.error)
             } else {
