@@ -32,6 +32,7 @@ const Player = (props) => {
             </div>
             <div style={playerProfileStyle}>
                 <p>{props.player.people && props.player.people.map(name => name.fullName)} #{props.player.people && props.player.people.map(name => name.primaryNumber)}</p>
+                <p>{props.player.people && props.player.people.map(pos => (pos.primaryPosition.type))}</p>
                 <p>{props.player.people && props.player.people.map(name => name.currentTeam.name)}</p>
                 <p>{props.player.people && props.player.people.map(ht => ht.height)}   {props.player.people && props.player.people.map(wt => wt.weight)}lbs</p>
                 <p>DOB: {props.player.people && props.player.people.map(bd => bd.birthDate)}  Age: {props.player.people && props.player.people.map(age => age.currentAge)}</p>
@@ -61,6 +62,7 @@ const Player = (props) => {
                         <td>{props.stats.stats && props.stats.stats.map(val => val.splits.map(yr => <p>{yr.stat.assists}</p>))}</td>
                         <td>{props.stats.stats && props.stats.stats.map(val => val.splits.map(yr => <p>{yr.stat.points}</p>))}</td>
                     </tr> */}
+                    {/* {if(props.player.people && props.player.people.map(pos => (pos.primaryPosition.type))===)} */}
                     {props.stats.stats && props.stats.stats.map(val => (val.splits.map(yr => (<tr>
                         <td>{yr.season.slice(0, 4) + '-' + yr.season.slice(4,8)}</td>
                         <td>{yr.team.name}</td>
