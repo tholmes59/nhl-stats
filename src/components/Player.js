@@ -32,10 +32,10 @@ const Player = (props) => {
     if (position == 'Goalie'){
         table =  <Table responsive bordered hover style={tableStyle} >
         <thead>
-            <tr>
+            {/* <tr>
                 <th colspan="3"></th>
                 <th colspan="4">Goalie</th>
-            </tr>
+            </tr> */}
             <tr>
                 <th>Season</th>
                 <th>Team</th>
@@ -57,10 +57,10 @@ const Player = (props) => {
     </Table>} else {
         table =  <Table responsive bordered hover style={tableStyle} >
         <thead>
-            <tr>
+            {/* <tr>
                 <th colspan="3"></th>
                 <th colspan="4">Position Player</th>
-            </tr>
+            </tr> */}
             <tr>
                 <th>Season</th>
                 <th>Team</th>
