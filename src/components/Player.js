@@ -48,7 +48,7 @@ const Player = (props) => {
                 <td>{yr.league.name}</td>
                 <td>{yr.stat.games}</td>
                 <td>{yr.stat.goalsAgainst}</td>
-                <td>{yr.stat.goalAgainstAverage}</td>
+                <td>{yr.stat.goalAgainstAverage.toFixed(2)}</td>
                 </tr>))))
             }
         </tbody>
