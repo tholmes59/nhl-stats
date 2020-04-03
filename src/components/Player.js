@@ -66,6 +66,7 @@ const Player = (props) => {
                 <th>Assists</th>
                 <th>Points</th>
                 <th>Penatly Minutes</th>
+                <th>Plus/Minus</th>
             </tr>
         </thead>
         <tbody>
@@ -78,6 +79,7 @@ const Player = (props) => {
                 <td>{yr.stat.assists}</td>
                 <td>{yr.stat.points}</td>
                 <td>{yr.stat.pim}</td>
+                <td>{yr.stat.plusMinus}</td>
                 </tr>))))
             }
         </tbody>
