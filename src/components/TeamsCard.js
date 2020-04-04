@@ -17,7 +17,8 @@ class TeamsCard extends React.Component {
             width: '20rem',
             padding: '.2rem',
             margin: '.5rem',
-            
+            borderRadius: '12px',
+            boxShadow: '5px 10px 18px #888888'
         }
         const linkStyle = {
             color: 'white',
