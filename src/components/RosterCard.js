@@ -28,6 +28,12 @@ class RosterCard extends React.Component {
             border: 'none',
             background: 'none'
         }
+
+        const playerBox = {
+            width: '30rem',
+            border: '1px solid',
+            margin: '1rem 0'
+        }
         return (
             <div>
                 <div style={headingStyle}>
@@ -35,9 +41,12 @@ class RosterCard extends React.Component {
                 </div>
                 <div style={playerStyle}>
                     {this.props.player.roster.roster.map((item, id) => 
-                    <p key={id}>#{item.jerseyNumber} 
-                    <button type="button" style={playerButton} onClick={this.handleClick}><Link key={item.person.id} id={item.person.id} to={'/player'}  >{item.person.fullName}</Link> </button>
-                    - {item.position.abbreviation}</p>)}
+                    <div style={playerBox}>
+                        <p key={id}>#{item.jerseyNumber} 
+                        <button type="button" style={playerButton} onClick={this.handleClick}><Link key={item.person.id} id={item.person.id} to={'/player'}  >{item.person.fullName}</Link> </button>
+                        - {item.position.abbreviation}</p>
+                    </div>
+                        )}
                 </div>
             </div>
         )
