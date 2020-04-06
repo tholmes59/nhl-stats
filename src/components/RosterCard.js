@@ -23,7 +23,7 @@ class RosterCard extends React.Component {
         fontFamily: 'Sintony',
         fontSize: '2vmin',
         margin: '1rem'
-    }
+        }
         const playerButton = {
             border: 'none',
             background: 'none'
@@ -33,7 +33,9 @@ class RosterCard extends React.Component {
             width: 'fit-content',
             padding: '0 1rem',
             border: '1px solid',
-            margin: '1rem 0'
+            margin: '1rem 0',
+            borderRadius: '5px',
+            boxShadow: '5px 10px 18px #888888'
         }
         return (
             <div>
