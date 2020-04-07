@@ -1,7 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom';
 
 const Home = () => {
+
+    const history = useHistory()
+
+    const handleClick = () => {
+        history.push('/teams')
+    }
 
     const homeContainer = {
         position: 'relative',
@@ -49,7 +56,7 @@ const Home = () => {
             <div style={contentContainer}>
                 <h2 style={heading}>Welcome to NHL Stats!</h2> 
                 <p style={des}>View your favorite teams roster and see the stats of all your favorite players</p>
-                <button type="button" variant="outline-dark" style={button}><Link to={'/teams'} style={btn}> View Teams</Link></button>
+                <button type="button" variant="outline-dark" style={button} onClick={handleClick}><Link to={'/teams'} style={btn}> View Teams</Link></button>
             </div>
         </div>
     ) 
