@@ -4,12 +4,14 @@ import { fetchRoster } from '../actions/roster'
 import { connect } from 'react-redux';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button'
+import { withRouter } from "react-router-dom";
 
 class TeamsCard extends React.Component {
 
     handleClick = event => {
         event.preventDefault();
-        this.props.fetchRoster(this.props.team.id)
+        this.props.fetchRoster(this.props.team.id);
+        this.props.history.push('/roster')
     }
 
     render () {
@@ -46,4 +48,4 @@ class TeamsCard extends React.Component {
     }
 }
 
-export default connect(null, {fetchRoster})(TeamsCard);
+export default connect(null, {fetchRoster})(withRouter(TeamsCard));
