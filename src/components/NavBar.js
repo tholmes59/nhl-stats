@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
 
@@ -69,10 +69,10 @@ const NavBar = () => {
 
     return (
         <nav style={navBar}>
-            <a href="/"><p style={logo}><img src={require("../assets/nhl.jpg")} alt="NHL Logo" style={img}/></p></a> 
+            <NavLink to={'/'}><p style={logo}><img src={require("../assets/nhl.jpg")} alt="NHL Logo" style={img}/></p></NavLink> 
             <ul style={navLinks}>
-              <li ><a href="/teams" style={navItem}>Teams</a></li> 
-              <li ><a href="/" style={navItem}>Home </a></li> 
+              <li ><NavLink to={'/teams'} style={navItem}>Teams</NavLink></li> 
+              <li ><NavLink to={'/'} style={navItem}>Home </NavLink></li> 
             </ul>
         </nav>
     )
