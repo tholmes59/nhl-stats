@@ -38,14 +38,17 @@ const NavBar = () => {
         verticalAlign: 'middle',
         // color: 'white',
         // paddingTop: '5px',
-        
+        // objectFit: 'cover',
+        // minHeight: '100vh'
+        // height: '100%'
       }
 
       const img = {
           width: '8vw',
           height: '8vh',
           marginTop: '-10px',
-          marginBottom: '-20px'
+          marginBottom: '-20px',
+          objectFit: 'contain'
       }
 
       const navLinks = {
@@ -66,7 +69,7 @@ const NavBar = () => {
 
     return (
         <nav style={navBar}>
-            <p style={logo}><img src={require("../assets/nhl.jpg")} alt="NHL Logo" style={img}/></p>
+            <a href="/"><p style={logo}><img src={require("../assets/nhl.jpg")} alt="NHL Logo" style={img}/></p></a> 
             <ul style={navLinks}>
               <li ><a href="/teams" style={navItem}>Teams</a></li> 
               <li ><a href="/" style={navItem}>Home </a></li> 
