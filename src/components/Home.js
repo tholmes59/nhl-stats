@@ -12,9 +12,11 @@ const Home = () => {
 
     const homeContainer = {
         position: 'relative',
+        background: 'black'
     }
 
     const img = {
+        display: 'block',
         minHeight: '100vh',
         objectFit: 'cover',
         maxWidth: '100%',
