@@ -93,7 +93,7 @@ const Player = (props) => {
             </div>
             <div style={playerProfileStyle}>
                 <p>{props.player.people && props.player.people.map(name => name.fullName)} #{props.player.people && props.player.people.map(name => name.primaryNumber)}</p>
-                <p>{props.player.people && props.player.people.map(pos => (pos.primaryPosition.type))}</p>
+                <p>{props.player.people && props.player.people.map(pos => (pos.primaryPosition.type))} - {props.player.people && props.player.people.map(pos => (pos.primaryPosition.name))}</p>
                 <p>{props.player.people && props.player.people.map(name => name.currentTeam.name)}</p>
                 <p>{props.player.people && props.player.people.map(ht => ht.height)}   {props.player.people && props.player.people.map(wt => wt.weight)}lbs</p>
                 <p>DOB: {props.player.people && props.player.people.map(bd => bd.birthDate)}  Age: {props.player.people && props.player.people.map(age => age.currentAge)}</p>
