@@ -18,7 +18,10 @@ const Player = (props) => {
     const playerProfileStyle = {
         fontFamily: 'Sintony',
         fontSize: '2vw',
-        margin: '1rem'
+        margin: '1rem',
+        border: '1px solid',
+        width: 'fit-content',
+        padding: '1rem'
     }
     const tableStyle = {
             fontSize: '1.2vw',
