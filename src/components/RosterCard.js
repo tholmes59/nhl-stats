@@ -12,17 +12,22 @@ class RosterCard extends React.Component {
         this.props.fetchPlayer(event.target.id);
         this.props.fetchPlayerStats(event.target.id);
     }
+    
 
     render () {
+
         const headingStyle = {
+            fontFamily: 'Sintony',
+            fontSize: '4vmin',
             margin: '1rem',
             paddingTop: '.5rem',
-            paddingBottom: '.5rem'
+            paddingBottom: '.5rem',
+            
         }
         const playerStyle = {
-        fontFamily: 'Sintony',
-        fontSize: '2vmin',
-        margin: '1rem'
+            fontFamily: 'Sintony',
+            fontSize: '2.5vmin',
+            margin: '1rem'
         }
         const playerButton = {
             border: 'none',
@@ -31,16 +36,17 @@ class RosterCard extends React.Component {
 
         const playerBox = {
             width: 'fit-content',
-            padding: '0 1rem',
+            padding: '.3rem 1rem',
             border: '1px solid',
             margin: '1rem 0',
             borderRadius: '5px',
             boxShadow: '5px 10px 18px #888888'
         }
+    
         return (
             <div>
                 <div style={headingStyle}>
-                    <h1>{this.props.player.name}</h1>
+                    <span>{this.props.player.name}</span>
                 </div>
                 <div style={playerStyle}>
                     {this.props.player.roster.roster.map((item, id) => 
