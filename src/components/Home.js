@@ -41,15 +41,17 @@ const Home = () => {
     }
 
     const button = {
+        display: 'flex',
         backgroundColor: 'transparent',
         padding: '.5vw 1vh',
         borderRadius: '5px',
-        border: 'solid #404040 .5px'
+        border: 'solid #404040 .5px',
+        width: 'fit-content',
     }
 
     const btn = {
         textDecoration: 'none',
-        fontSize: '1.2vw'
+        fontSize: '1.2vw',
     }
 
     return (
