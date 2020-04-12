@@ -21,11 +21,15 @@ const Player = (props) => {
         margin: '1rem',
         border: '1px solid',
         width: 'fit-content',
-        padding: '1rem'
+        padding: '1rem',
+        borderRadius: '5px',
+        boxShadow: '5px 10px 18px #888888'
     }
     const tableStyle = {
             fontSize: '1.2vw',
-            margin: '1rem'
+            margin: '1rem',
+            borderRadius: '10px',
+            boxShadow: '5px 10px 18px #888888'
     }
 
     let table;
