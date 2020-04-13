@@ -12,7 +12,8 @@ const Footer = () => {
         textAlign: 'center',
         height: '3rem',
         marginTop: '5px',
-        fontSize: '1vmin'
+        fontSize: '1vmin',
+        paddingTop: '3px'
     }
 
     const getYear = () => {
