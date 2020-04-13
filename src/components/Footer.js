@@ -13,7 +13,7 @@ const Footer = () => {
         height: '3rem',
         marginTop: '5px',
         fontSize: '1vmin',
-        paddingTop: '3px'
+        paddingTop: '.5rem'
     }
 
     const getYear = () => {
