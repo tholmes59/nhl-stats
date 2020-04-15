@@ -1,4 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# My NHL Stats
+
+### Description
+
+NHL Stats is a web application that allows users to search the rosters and stats of the players of their favorite NHL teams. This application was created using React/Redux, the NHL API, and styled using a combination of CSS in JS objects and React Bootstrap.
 
 ## Available Scripts
 
