@@ -37,7 +37,7 @@ const Player = (props) => {
     // console.log(props.player.people && props.player.people.map(pos => (pos.primaryPosition.type)))
     // console.log(position = "Goalie")
     if (position == 'Goalie'){
-        table =  <Table responsive bordered hover style={tableStyle} >
+        table =  <Table bordered hover responsive style={tableStyle} >
         <thead>
             <tr>
                 <th>Season</th>
@@ -62,7 +62,7 @@ const Player = (props) => {
             }
         </tbody>
     </Table>} else {
-        table =  <Table responsive bordered hover style={tableStyle} >
+        table =  <Table bordered hover responsive style={tableStyle} >
         <thead>
             <tr>
                 <th>Season</th>
