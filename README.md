@@ -16,6 +16,10 @@ Alternatively:
 
 Use the app by visiting [My-NHL-Stats](https://my-nhl-stats.netlify.com/)
 
+## License
+
+The NHL Stats App is licensed under the [MIT license](https://opensource.org/licenses/MIT)
+
 ## Available Scripts
 
 In the project directory, you can run:
