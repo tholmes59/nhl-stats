@@ -20,6 +20,10 @@ Use the app by visiting [My-NHL-Stats](https://my-nhl-stats.netlify.com/)
 
 The NHL Stats App is licensed under the [MIT license](https://opensource.org/licenses/MIT)
 
+## Code of Conduct
+
+Everyone interacting in the NHL Stats App project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the code of conduct.
+
 ## Available Scripts
 
 In the project directory, you can run:
