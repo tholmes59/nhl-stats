@@ -26,7 +26,7 @@ const Player = (props) => {
         boxShadow: '5px 10px 18px #888888'
     }
     const tableStyle = {
-            fontSize: '1.2vw',
+            // fontSize: '1.2vw',
             margin: '1rem',
             borderRadius: '10px',
             boxShadow: '5px 10px 18px #888888'
@@ -37,7 +37,7 @@ const Player = (props) => {
     // console.log(props.player.people && props.player.people.map(pos => (pos.primaryPosition.type)))
     // console.log(position = "Goalie")
     if (position == 'Goalie'){
-        table =  <Table bordered hover responsive style={tableStyle} >
+        table =  <Table bordered hover responsive style={tableStyle} className="table-style">
         <thead>
             <tr>
                 <th>Season</th>
@@ -62,7 +62,7 @@ const Player = (props) => {
             }
         </tbody>
     </Table>} else {
-        table =  <Table bordered hover responsive style={tableStyle} >
+        table =  <Table bordered hover responsive style={tableStyle} className="table-style">
         <thead>
             <tr>
                 <th>Season</th>
@@ -99,11 +99,11 @@ const Player = (props) => {
                 <h1>Statistics</h1>
             </div>
             <div style={playerProfileStyle}>
-                <p>{props.player.people && props.player.people.map(name => name.fullName)} #{props.player.people && props.player.people.map(name => name.primaryNumber)}</p>
-                <p>{props.player.people && props.player.people.map(pos => (pos.primaryPosition.type))} - {props.player.people && props.player.people.map(pos => (pos.primaryPosition.name))}</p>
-                <p>{props.player.people && props.player.people.map(name => name.currentTeam.name)}</p>
-                <p>{props.player.people && props.player.people.map(ht => ht.height)}   {props.player.people && props.player.people.map(wt => wt.weight)} lbs</p>
-                <p>Age: {props.player.people && props.player.people.map(age => age.currentAge)} DOB: {props.player.people && props.player.people.map(bd => bd.birthDate)}</p>
+                <p className="player-style">{props.player.people && props.player.people.map(name => name.fullName)} #{props.player.people && props.player.people.map(name => name.primaryNumber)}</p>
+                <p className="player-style">{props.player.people && props.player.people.map(pos => (pos.primaryPosition.type))} - {props.player.people && props.player.people.map(pos => (pos.primaryPosition.name))}</p>
+                <p className="player-style">{props.player.people && props.player.people.map(name => name.currentTeam.name)}</p>
+                <p className="player-style">{props.player.people && props.player.people.map(ht => ht.height)}   {props.player.people && props.player.people.map(wt => wt.weight)} lbs</p>
+                <p className="player-style">Age: {props.player.people && props.player.people.map(age => age.currentAge)} DOB: {props.player.people && props.player.people.map(bd => bd.birthDate)}</p>
             </div>
             {/* <Table responsive bordered hover style={tableStyle} >
                 <thead>
