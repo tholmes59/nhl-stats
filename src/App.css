@@ -42,3 +42,15 @@ body {
     transform: rotate(360deg);
   }
 } */
+
+@media only screen and (max-width : 770px){
+  .home-button{
+    font-size: 1.5vh;
+  }
+  .roster-button{
+    font-size: 1.8vh;
+  }
+  .table-style{
+    font-size: 1.4vh;
+  }
+}
