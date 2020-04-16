@@ -51,7 +51,6 @@ const Home = () => {
 
     const btn = {
         textDecoration: 'none',
-        fontSize: '1.2vw',
     }
 
     return (
@@ -60,7 +59,7 @@ const Home = () => {
             <div style={contentContainer}>
                 <h2 style={heading}>Welcome to NHL Stats!</h2> 
                 <p style={des}>View your favorite teams roster and see the stats of all your favorite players</p>
-                <button type="button" variant="outline-dark" style={button} onClick={handleClick}><Link to={'/teams'} style={btn}> View Teams</Link></button>
+                <button type="button" variant="outline-dark" style={button} className="home-button" onClick={handleClick}><Link to={'/teams'} style={btn}> View Teams</Link></button>
             </div>
         </div>
     ) 
