@@ -71,8 +71,8 @@ const NavBar = () => {
         <nav style={navBar}>
             <NavLink to={'/'}><p style={logo}><img src={require("../assets/nhl.jpg")} alt="NHL Logo" style={img}/></p></NavLink> 
             <ul style={navLinks}>
-              <li ><NavLink to={'/teams'} style={navItem}>Teams</NavLink></li> 
-              <li ><NavLink to={'/'} style={navItem}>Home </NavLink></li> 
+              <li ><NavLink to={'/teams'} style={navItem} className="nav-font">Teams</NavLink></li> 
+              <li ><NavLink to={'/'} style={navItem} className="nav-font">Home </NavLink></li> 
             </ul>
         </nav>
     )
