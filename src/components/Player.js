@@ -31,6 +31,11 @@ const Player = (props) => {
             borderRadius: '10px',
             boxShadow: '5px 10px 18px #888888'
     }
+    const hrStyle = {
+        height: '12px',
+        border: '0',
+        boxShadow: 'inset 0 12px 12px -12px rgba(0, 0, 0, 0.5)'
+    }
 
     let table;
     let position = (props.player.people && props.player.people.map(pos => (pos.primaryPosition.type)))
@@ -97,6 +102,7 @@ const Player = (props) => {
         <div style={playerStyle}>
             <div style={headingStyle}>
                 <h1>Statistics</h1>
+                <hr style={hrStyle}/>
             </div>
             <div style={playerProfileStyle}>
                 <p className="player-style">{props.player.people && props.player.people.map(name => name.fullName)} #{props.player.people && props.player.people.map(name => name.primaryNumber)}</p>
