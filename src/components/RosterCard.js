@@ -18,7 +18,7 @@ class RosterCard extends React.Component {
 
         const headingStyle = {
             fontFamily: 'Sintony',
-            // fontSize: '4vmin',
+            fontSize: '3vmin',
             margin: '1rem',
             paddingTop: '.5rem',
             paddingBottom: '.5rem',
@@ -31,7 +31,8 @@ class RosterCard extends React.Component {
         }
         const playerButton = {
             border: 'none',
-            background: 'none'
+            background: 'none',
+            textDecoration: 'none'
         }
 
         const playerBox = {
@@ -42,17 +43,22 @@ class RosterCard extends React.Component {
             borderRadius: '5px',
             boxShadow: '5px 10px 18px #888888'
         }
+        const playerLink = {
+            // textDecoration: 'none',
+            color: 'black',
+            fontWeight: 'bold'
+        }
     
         return (
             <div>
                 <div style={headingStyle}>
-                    <span>{this.props.player.name}</span>
+                    <span className="player-style">{this.props.player.name}</span>
                 </div>
                 <div style={playerStyle}>
                     {this.props.player.roster.roster.map((item, id) => 
                     <div style={playerBox} className="roster-button">
                         <span key={id}>#{item.jerseyNumber} 
-                        <button type="button" style={playerButton} onClick={this.handleClick}><Link key={item.person.id} id={item.person.id} to={'/player'}  >{item.person.fullName}</Link> </button>
+                        <button type="button" style={playerButton} onClick={this.handleClick}><Link style={playerLink} key={item.person.id} id={item.person.id} to={'/player'}  >{item.person.fullName}</Link> </button>
                         - {item.position.abbreviation}</span>
                     </div>
                         )}
