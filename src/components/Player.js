@@ -134,8 +134,8 @@ const Player = (props) => {
                 <hr style={hrStyle}/>
             </div>
             <div style={playerProfileStyle}>
-                <p className="player-style">{props.player.people && props.player.people.map(name => name.fullName)} #{props.player.people && props.player.people.map(name => name.primaryNumber)}</p>
-                <p className="player-style">{props.player.people && props.player.people.map(pos => (pos.primaryPosition.type))} - {props.player.people && props.player.people.map(pos => (pos.primaryPosition.name))}</p>
+                <p className="player-style">{props.player.people && props.player.people.map(name => name.fullName)}  #{props.player.people && props.player.people.map(name => name.primaryNumber)}</p>
+                <p className="player-style">{props.player.people && props.player.people.map(pos => (pos.primaryPosition.name))}</p>
                 <p className="player-style">{props.player.people && props.player.people.map(name => name.currentTeam.name)}</p>
                 <p className="player-style">{props.player.people && props.player.people.map(ht => ht.height)}   {props.player.people && props.player.people.map(wt => wt.weight)} lbs</p>
                 <p className="player-style">Age: {props.player.people && props.player.people.map(age => age.currentAge)} | Born: {props.player.people && props.player.people.map(bd => birth(bd.birthDate))}</p>
