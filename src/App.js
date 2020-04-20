@@ -8,7 +8,9 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.css';
 import NavBar from './components/NavBar.js';
 import Footer from './components/Footer';
-import Home from './components/Home'
+import Home from './components/Home';
+import ScrollUpButton from "react-scroll-up-button"; 
+import ScrollToTop from './components/ScrollToTop.js';
 
 class App extends React.Component {
 
@@ -19,13 +21,15 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        
+        <ScrollUpButton />
         <Router>
-          <NavBar />
-          <Route exact path="/"><Home /></Route>
-          <Route exact path="/teams" render={props => <Teams key={this.props.teams && this.props.teams.id} teams={this.props.teams}/>} />
-          <Route exact path="/roster" render={props => <Roster key={this.props.roster && this.props.roster.id} roster={this.props.roster} teams={this.props.teams}/>} />
-          <Route exact path="/player" render={props => <Player key={this.props.player && this.props.player.id} player={this.props.player} stats={this.props.stats}/>}/>
+          <ScrollToTop>
+            <NavBar />
+            <Route exact path="/"><Home /></Route>
+            <Route exact path="/teams" render={props => <Teams key={this.props.teams && this.props.teams.id} teams={this.props.teams}/>} />
+            <Route exact path="/roster" render={props => <Roster key={this.props.roster && this.props.roster.id} roster={this.props.roster} teams={this.props.teams}/>} />
+            <Route exact path="/player" render={props => <Player key={this.props.player && this.props.player.id} player={this.props.player} stats={this.props.stats}/>}/>
+          </ScrollToTop>
         </Router>
         {/* <Teams tteams={this.props.teams}/> */}
         <Footer />
