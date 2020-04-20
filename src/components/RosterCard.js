@@ -57,9 +57,9 @@ class RosterCard extends React.Component {
                 <div style={playerStyle}>
                     {this.props.player.roster.roster.map((item, id) => 
                     <div style={playerBox} className="roster-button">
-                        <span key={id}>#{item.jerseyNumber} 
+                        <span key={id}>#{item.jerseyNumber} |
                         <button type="button" style={playerButton} onClick={this.handleClick}><Link style={playerLink} key={item.person.id} id={item.person.id} to={'/player'}  >{item.person.fullName}</Link> </button>
-                        - {item.position.abbreviation}</span>
+                        | {item.position.abbreviation}</span>
                     </div>
                         )}
                 </div>
