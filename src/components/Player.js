@@ -5,6 +5,35 @@ import Table from 'react-bootstrap/Table';
 
 const Player = (props) => {
 
+   let birth = (string) => {
+    let birArr = string.split('-')
+ 
+    let months = [
+      {id: '01', name: "January"}, 
+      {id: '02', name:'February'},
+      {id: '03', name: 'March'},
+      {id: '04', name: 'April'},
+      {id: '05', name: 'May'},
+      {id: '06', name: 'June'},
+      {id: '07', name: 'July'},
+      {id: '08', name: 'August'},
+      {id: '09', name: 'September'},
+      {id: '10', name: 'October'},
+      {id: '11', name: 'November'},
+      {id: '12', name: 'December'}
+      ]
+   
+      let year = birArr[0];
+      let day = birArr[2]
+      let month = ''
+      months.map(x => {
+        if(x.id === birArr[1]){
+         month = x.name;
+        }
+      })
+    return (month + ' ' + day + ', ' + year);
+   }
+
     const playerStyle = {
         paddingBottom: '3rem'
     }
@@ -26,10 +55,10 @@ const Player = (props) => {
         boxShadow: '5px 10px 18px #888888'
     }
     const tableStyle = {
-            // fontSize: '1.2vw',
-            margin: '1rem',
-            borderRadius: '10px',
-            boxShadow: '5px 10px 18px #888888'
+        // fontSize: '1.2vw',
+        margin: '1rem',
+        borderRadius: '10px',
+        boxShadow: '5px 10px 18px #888888'
     }
     const hrStyle = {
         height: '12px',
@@ -109,7 +138,7 @@ const Player = (props) => {
                 <p className="player-style">{props.player.people && props.player.people.map(pos => (pos.primaryPosition.type))} - {props.player.people && props.player.people.map(pos => (pos.primaryPosition.name))}</p>
                 <p className="player-style">{props.player.people && props.player.people.map(name => name.currentTeam.name)}</p>
                 <p className="player-style">{props.player.people && props.player.people.map(ht => ht.height)}   {props.player.people && props.player.people.map(wt => wt.weight)} lbs</p>
-                <p className="player-style">Age: {props.player.people && props.player.people.map(age => age.currentAge)} DOB: {props.player.people && props.player.people.map(bd => bd.birthDate)}</p>
+                <p className="player-style">Age: {props.player.people && props.player.people.map(age => age.currentAge)} | Born: {props.player.people && props.player.people.map(bd => birth(bd.birthDate))}</p>
             </div>
             {/* <Table responsive bordered hover style={tableStyle} >
                 <thead>
