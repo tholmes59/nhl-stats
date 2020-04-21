@@ -12,13 +12,12 @@ class RosterCard extends React.Component {
         this.props.fetchPlayer(event.target.id);
         this.props.fetchPlayerStats(event.target.id);
     }
-    
-
+   
     render () {
 
         const headingStyle = {
             fontFamily: 'Sintony',
-            fontSize: '3vmin',
+            // fontSize: '2.3vmin',
             margin: '1rem',
             paddingTop: '.5rem',
             paddingBottom: '.5rem',
@@ -48,11 +47,21 @@ class RosterCard extends React.Component {
             color: 'black',
             fontWeight: 'bold'
         }
+
+        const  viewTeamSite = () => {
+            window.open(this.props.player.officialSiteUrl)
+        }
     
         return (
             <div>
                 <div style={headingStyle}>
-                    <span className="player-style">{this.props.player.name}</span>
+                    <h1>Roster</h1>
+                </div>
+                <div style={headingStyle}>
+                    <h3 className="player-style">{this.props.player.name}</h3>
+                    <p className="player-style">{this.props.player.conference.name} Conference</p>
+                    <p className="player-style">{this.props.player.division.name} Division</p>
+                    <button onClick={viewTeamSite}>View Team Site</button>
                 </div>
                 <div style={playerStyle}>
                     {this.props.player.roster.roster.map((item, id) => 
