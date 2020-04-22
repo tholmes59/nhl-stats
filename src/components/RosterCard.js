@@ -37,6 +37,17 @@ class RosterCard extends React.Component {
             borderRadius: '5px',
             boxShadow: '5px 10px 18px #888888'
         }
+
+        const teamButton = {
+            display: 'flex',
+            color: '#FFFFFF',
+            backgroundColor: '#F86D02',
+            padding: '.5vw 1vh',
+            borderRadius: '5px',
+            border: 'solid #404040 .5px',
+            width: 'fit-content',
+            fontSize: '1vw'
+        }
         const playerStyle = {
             fontFamily: 'Sintony',
             // fontSize: '2.5vmin',
@@ -76,7 +87,7 @@ class RosterCard extends React.Component {
                     <p className="player-style">{this.props.player.name}</p>
                     <p className="player-style">{this.props.player.conference.name} Conference</p>
                     <p className="player-style">{this.props.player.division.name} Division</p>
-                    <button onClick={viewTeamSite}>View Team Site</button>
+                    <button onClick={viewTeamSite} style={teamButton}>View Team Site</button>
                 </div>
                 <div style={playerStyle}>
                     {this.props.player.roster.roster.map((item, id) => 
