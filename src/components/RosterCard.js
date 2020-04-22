@@ -16,12 +16,26 @@ class RosterCard extends React.Component {
     render () {
 
         const headingStyle = {
-            fontFamily: 'Sintony',
-            // fontSize: '2.3vmin',
             margin: '1rem',
             paddingTop: '.5rem',
-            paddingBottom: '.5rem',
-            
+            paddingBottom: '.5rem'
+        }
+
+        const hrStyle = {
+            height: '12px',
+            border: '0',
+            boxShadow: 'inset 0 12px 12px -12px rgba(0, 0, 0, 0.5)'
+        }
+
+        const rosterProfileStyle = {
+            fontFamily: 'Sintony',
+            fontSize: '2vw',
+            margin: '1rem 1rem 2rem 1rem',
+            border: '1px solid',
+            width: 'fit-content',
+            padding: '1rem',
+            borderRadius: '5px',
+            boxShadow: '5px 10px 18px #888888'
         }
         const playerStyle = {
             fontFamily: 'Sintony',
@@ -56,9 +70,10 @@ class RosterCard extends React.Component {
             <div>
                 <div style={headingStyle}>
                     <h1>Roster</h1>
+                    <hr style={hrStyle}/>
                 </div>
-                <div style={headingStyle}>
-                    <h3 className="player-style">{this.props.player.name}</h3>
+                <div style={rosterProfileStyle}>
+                    <p className="player-style">{this.props.player.name}</p>
                     <p className="player-style">{this.props.player.conference.name} Conference</p>
                     <p className="player-style">{this.props.player.division.name} Division</p>
                     <button onClick={viewTeamSite}>View Team Site</button>
