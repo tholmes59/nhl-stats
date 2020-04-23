@@ -38,6 +38,13 @@ class RosterCard extends React.Component {
             boxShadow: '5px 10px 18px #888888'
         }
 
+        const headingTeam = {
+            fontFamily: 'Sintony',
+            fontSize: '2vw',
+            margin: '1rem',
+            // fontStyle: 'oblique'
+        }
+
         const teamButton = {
             display: 'flex',
             color: '#FFFFFF',
@@ -49,6 +56,9 @@ class RosterCard extends React.Component {
             fontSize: '1vw'
         }
         const playerStyle = {
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(15rem, 1fr))',
+            gridGap: '.5rem',
             fontFamily: 'Sintony',
             // fontSize: '2.5vmin',
             margin: '1rem'
@@ -60,12 +70,14 @@ class RosterCard extends React.Component {
         }
 
         const playerBox = {
-            width: 'fit-content',
-            padding: '.3rem 1rem',
-            border: '1px solid',
-            margin: '1rem 0',
-            borderRadius: '5px',
-            boxShadow: '5px 10px 18px #888888'
+            // width: 'fit-content',
+            // padding: '.3rem 1rem',
+            // border: '1px solid',
+            // margin: '1rem 0',
+            // borderRadius: '5px',
+            // boxShadow: '5px 10px 18px #888888'
+            padding: '.5rem 0',
+            fontWeight: 'bold'
         }
         const playerLink = {
             // textDecoration: 'none',
@@ -89,6 +101,9 @@ class RosterCard extends React.Component {
                     <p className="player-style">{this.props.player.division.name} Division</p>
                     <button onClick={viewTeamSite} style={teamButton}>View Team Site</button>
                 </div>
+                <hr style={hrStyle}/>
+                <p style={headingTeam}><span className="player-style">Players:</span></p>
+                <hr/>
                 <div style={playerStyle}>
                     {this.props.player.roster.roster.map((item, id) => 
                     <div style={playerBox} className="roster-button">
