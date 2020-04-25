@@ -14,7 +14,7 @@ To install locally:
 
 Alternatively:
 
-Use the app by visiting [My-NHL-Stats](https://my-nhl-stats.netlify.com/)
+Use the app by visiting [My NHL Stats](https://my-nhl-stats.netlify.com/)
 
 ## License
 
