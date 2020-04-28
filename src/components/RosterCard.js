@@ -99,7 +99,8 @@ class RosterCard extends React.Component {
                     <p className="player-style">{this.props.player.name}</p>
                     <p className="player-style">{this.props.player.conference.name} Conference</p>
                     <p className="player-style">{this.props.player.division.name} Division</p>
-                    <p className="player-style">Arena: {this.props.player.venue.name}</p>
+                    <p className="player-style">{this.props.player.venue.name} | {this.props.player.venue.city}</p>
+                    <p className="player-style">First year {this.props.player.firstYearOfPlay}</p>
                     <button onClick={viewTeamSite} style={teamButton}>View Team Site</button>
                 </div>
                 <hr style={hrStyle}/>
