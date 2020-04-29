@@ -70,7 +70,7 @@ const Player = (props) => {
     let position = (props.player.people && props.player.people.map(pos => (pos.primaryPosition.type)))
     // console.log(props.player.people && props.player.people.map(pos => (pos.primaryPosition.type)))
     // console.log(position = "Goalie")
-    if (position == 'Goalie'){
+    if (position == "Goalie"){
         table =  <Table bordered hover responsive style={tableStyle} className="table-style">
         <thead>
             <tr>
@@ -87,7 +87,7 @@ const Player = (props) => {
             {props.stats.stats && props.stats.stats.map(val => (val.splits.map(yr => (<tr>
                 <td>{yr.season.slice(0, 4) + '-' + yr.season.slice(4,8)}</td>
                 <td>{yr.team.name}</td>
-                <td>{yr.league.name}</td>
+                <td>{(yr.league.name==="National Hockey League") ? "NHL" : yr.league.name}</td>
                 <td>{yr.stat.games}</td>
                 <td>{yr.stat.goalsAgainst}</td>
                 <td>{yr.stat.goalAgainstAverage && yr.stat.goalAgainstAverage.toFixed(2)}</td>
@@ -114,7 +114,7 @@ const Player = (props) => {
             {props.stats.stats && props.stats.stats.map(val => (val.splits.map(yr => (<tr>
                 <td>{yr.season.slice(0, 4) + '-' + yr.season.slice(4,8)}</td>
                 <td>{yr.team.name}</td>
-                <td>{yr.league.name}</td>
+                <td>{(yr.league.name==="National Hockey League") ? "NHL" : yr.league.name}</td>
                 <td>{yr.stat.games}</td>
                 <td>{yr.stat.goals}</td>
                 <td>{yr.stat.assists}</td>
