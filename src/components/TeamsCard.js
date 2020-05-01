@@ -27,8 +27,9 @@ class TeamsCard extends React.Component {
             textDecoration: 'none'
         }
         const buttonStyle = {
-            width: '10rem',
+            width: '9.5rem',
             margin: '.5rem',
+            padding: '.2rem',
             backgroundColor: '#F86D02'
         }
         return (
@@ -41,7 +42,7 @@ class TeamsCard extends React.Component {
                         <Card.Text>Stadium: {this.props.team.venue.name} - {this.props.team.venue.city}</Card.Text>
                         <Card.Text>Inception: {this.props.team.firstYearOfPlay}</Card.Text>
                     </Card.Body>
-                    <Button varient="primary" size="lg" style={buttonStyle} onClick={this.handleClick}><Link style={linkStyle} to={`/roster`}>View Roster</Link></Button>
+                    <Button varient="primary" size="lg" style={buttonStyle} onClick={this.handleClick}><Link style={linkStyle} className="link-style" to={`/roster`}>View Roster</Link></Button>
                 </Card>
             </div>
         )
