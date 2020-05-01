@@ -139,6 +139,7 @@ const Player = (props) => {
                 <p className="player-style">{props.player.people && props.player.people.map(name => name.currentTeam.name)}</p>
                 <p className="player-style">{props.player.people && props.player.people.map(ht => ht.height)}   {props.player.people && props.player.people.map(wt => wt.weight)} lbs</p>
                 <p className="player-style">Age: {props.player.people && props.player.people.map(age => age.currentAge)} | Born: {props.player.people && props.player.people.map(bd => birth(bd.birthDate))}</p>
+                <p className="player-style">Birthplace: {props.player.people && props.player.people.map(city => city.birthCity)}, {props.player.people && props.player.people.map(country => country.birthCountry)}</p>
             </div>
             {/* <Table responsive bordered hover style={tableStyle} >
                 <thead>
