@@ -11,8 +11,8 @@ const Teams = (props) => {
     const gridLayout = {
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(20rem, 1fr))',
-        gridGap: '10px',
-        margin: '10px 10px'
+        gridGap: '0.625rem',
+        margin: '0.625rem 0.625rem'
     }
     const teamCards = props.teams.teams && props.teams.teams.map(team => <TeamsCard key={team.id} team={team} />)
     return (
