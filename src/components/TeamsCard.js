@@ -17,6 +17,7 @@ class TeamsCard extends React.Component {
     render () {
         const cardStyle = {
             width: '20rem',
+            height: '19rem',
             padding: '.2rem',
             margin: '.5rem',
             borderRadius: '12px',
