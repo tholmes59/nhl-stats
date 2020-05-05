@@ -92,7 +92,7 @@ class RosterCard extends React.Component {
         return (
             <div>
                 <div style={headingStyle}>
-                    <h1>Roster</h1>
+                    <h1>{this.props.player.teamName} Roster</h1>
                     <hr style={hrStyle}/>
                 </div>
                 <div style={rosterProfileStyle}>
