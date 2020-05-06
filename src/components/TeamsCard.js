@@ -40,8 +40,8 @@ class TeamsCard extends React.Component {
                         <Card.Title>{this.props.team.name}</Card.Title>
                         <Card.Text>Conference: {this.props.team.conference.name}</Card.Text>
                         <Card.Text>Division: {this.props.team.division.name}</Card.Text>
-                        <Card.Text>Stadium: {this.props.team.venue.name} - {this.props.team.venue.city}</Card.Text>
-                        <Card.Text>Inception: {this.props.team.firstYearOfPlay}</Card.Text>
+                        <Card.Text>Arena: {this.props.team.venue.name} | {this.props.team.venue.city}</Card.Text>
+                        <Card.Text>Started {this.props.team.firstYearOfPlay}</Card.Text>
                     </Card.Body>
                     <Button varient="primary" size="lg" style={buttonStyle} onClick={this.handleClick}><Link style={linkStyle} className="link-style" to={`/roster`}>View Roster</Link></Button>
                 </Card>
