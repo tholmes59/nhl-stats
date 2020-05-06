@@ -66,7 +66,8 @@ class RosterCard extends React.Component {
         const playerButton = {
             border: 'none',
             background: 'none',
-            textDecoration: 'none'
+            textDecoration: 'underline',
+
         }
 
         const playerBox = {
