@@ -26,7 +26,7 @@ class RosterCard extends React.Component {
 
     const rosterProfileStyle = {
       fontFamily: "Sintony",
-      fontSize: "2vw",
+    //   fontSize: "2vw",
       margin: "1rem 1rem 2rem 1rem",
       border: "1px solid",
       width: "fit-content",
@@ -34,6 +34,14 @@ class RosterCard extends React.Component {
       borderRadius: "5px",
       boxShadow: "5px 10px 18px #888888"
     };
+
+    const rosterHeading = {
+        fontSize: '2vw'
+    }
+
+    const rosterBodyHeading = {
+        fontSize: '1.5vw'
+    }
 
     const headingTeam = {
       fontFamily: "Sintony",
@@ -78,7 +86,7 @@ class RosterCard extends React.Component {
       padding: ".5rem 0",
       fontWeight: "bold"
     };
-    
+
     const playerLink = {
       // textDecoration: 'none',
       color: "black",
@@ -96,18 +104,18 @@ class RosterCard extends React.Component {
           <hr style={hrStyle} />
         </div>
         <div style={rosterProfileStyle}>
-          <p className="team-style">{this.props.player.name}</p>
-          <p className="team-style">
-            {this.props.player.conference.name} Conference
+          <p style={rosterHeading} ><span className="team-style-heading">{this.props.player.name}</span></p>
+          <p style={rosterBodyHeading} >
+            <span className="team-style">{this.props.player.conference.name} Conference</span>
           </p>
-          <p className="team-style">
-            {this.props.player.division.name} Division
+          <p style={rosterBodyHeading} >
+            <span className="team-style">{this.props.player.division.name} Division</span>
           </p>
-          <p className="team-style">
-            {this.props.player.venue.name} | {this.props.player.venue.city}
+          <p style={rosterBodyHeading} >
+            <span className="team-style">{this.props.player.venue.name} | {this.props.player.venue.city}</span>
           </p>
-          <p className="team-style">
-            First year {this.props.player.firstYearOfPlay}
+          <p style={rosterBodyHeading} >
+            <span className="team-style">First year {this.props.player.firstYearOfPlay}</span>
           </p>
           <button onClick={viewTeamSite} style={teamButton}>
             <span className="team-button-style">
