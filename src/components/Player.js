@@ -130,7 +130,7 @@ const Player = (props) => {
     return (
         <div style={playerStyle}>
             <div style={headingStyle}>
-                <h1>Statistics</h1>
+                <h1>{props.player.people && props.player.people.map(name => name.firstName)}'s Stats</h1>
                 <hr style={hrStyle}/>
             </div>
             <div style={playerProfileStyle}>
