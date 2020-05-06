@@ -38,8 +38,8 @@ class TeamsCard extends React.Component {
                 <Card style={cardStyle}>
                     <Card.Body>
                         <Card.Title>{this.props.team.name}</Card.Title>
-                        <Card.Text>Conference: {this.props.team.conference.name}</Card.Text>
-                        <Card.Text>Division: {this.props.team.division.name}</Card.Text>
+                        <Card.Text>{this.props.team.conference.name} Conference</Card.Text>
+                        <Card.Text>{this.props.team.division.name} Division</Card.Text>
                         <Card.Text>Arena: {this.props.team.venue.name} | {this.props.team.venue.city}</Card.Text>
                         <Card.Text>Started {this.props.team.firstYearOfPlay}</Card.Text>
                     </Card.Body>
