@@ -35,8 +35,11 @@ body {
   .player-style{
     font-size: 2.6vh;
   }
-  .team-style{
+  .team-style-heading{
     font-size: 2.6vh;
+  }
+  .team-style{
+    font-size: 2vh;
   }
   .team-button-style{
     font-size: 2vh;
