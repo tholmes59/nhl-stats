@@ -30,7 +30,7 @@ class RosterCard extends React.Component {
       margin: "1rem 1rem 2rem 1rem",
       border: "1px solid",
       width: "fit-content",
-      padding: "1rem",
+      padding: "1rem 2rem",
       borderRadius: "5px",
       boxShadow: "5px 10px 18px #888888"
     };
