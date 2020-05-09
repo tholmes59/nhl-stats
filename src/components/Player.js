@@ -128,54 +128,58 @@ const Player = (props) => {
     }
    
     return (
-        <div style={playerStyle}>
-            <div style={headingStyle}>
-                <h1>{props.player.people && props.player.people.map(name => name.firstName)}'s Stats</h1>
-                <hr style={hrStyle}/>
-            </div>
-            <div style={playerProfileStyle}>
-                <p className="player-style">{props.player.people && props.player.people.map(name => name.fullName)}  #{props.player.people && props.player.people.map(name => name.primaryNumber)}</p>
-                <p className="player-style">{props.player.people && props.player.people.map(pos => (pos.primaryPosition.name))}</p>
-                <p className="player-style">{props.player.people && props.player.people.map(name => name.currentTeam.name)}</p>
-                <p className="player-style">{props.player.people && props.player.people.map(ht => ht.height)}   {props.player.people && props.player.people.map(wt => wt.weight)} lbs</p>
-                <p className="player-style">Age: {props.player.people && props.player.people.map(age => age.currentAge)} | Born: {props.player.people && props.player.people.map(bd => birth(bd.birthDate))}</p>
-                <p className="player-style">Birthplace: {props.player.people && props.player.people.map(city => city.birthCity)}, {props.player.people && props.player.people.map(state => state.birthStateProvince)} {props.player.people && props.player.people.map(country => country.birthCountry)}</p>
-            </div>
-            {/* <Table responsive bordered hover style={tableStyle} >
-                <thead>
-                    <tr>
-                        <th colspan="3"></th>
-                        <th colspan="4">Position Player</th>
-                    </tr>
-                    <tr>
-                        <th>Season</th>
-                        <th>Team</th>
-                        <th>Games</th>
-                        <th>Goals</th>
-                        <th>Assists</th>
-                        <th>Points</th>
-                        <th>Penatly Minutes</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {props.stats.stats && props.stats.stats.map(val => (val.splits.map(yr => (<tr>
-                        <td>{yr.season.slice(0, 4) + '-' + yr.season.slice(4,8)}</td>
-                        <td>{yr.team.name}</td>
-                        <td>{yr.stat.games}</td>
-                        <td>{yr.stat.goals}</td>
-                        <td>{yr.stat.assists}</td>
-                        <td>{yr.stat.points}</td>
-                        <td>{yr.stat.pim}</td>
-                        </tr>))))
-                    }
-                </tbody>
-            </Table> */}
-            <div>
-                {table}
-            </div>
-            
+      <div style={playerStyle}>
+        <div style={headingStyle}>
+          <h1>
+            {props.player.people &&
+              props.player.people.map(name => name.firstName)}
+            's Stats
+          </h1>
+          <hr style={hrStyle} />
         </div>
-    )
+        <div style={playerProfileStyle}>
+          <p className="player-style">
+            {props.player.people &&
+              props.player.people.map(name => name.fullName)}{" "}
+            #
+            {props.player.people &&
+              props.player.people.map(name => name.primaryNumber)}
+          </p>
+          <p className="player-style">
+            {props.player.people &&
+              props.player.people.map(pos => pos.primaryPosition.name)}
+          </p>
+          <p className="player-style">
+            {props.player.people &&
+              props.player.people.map(name => name.currentTeam.name)}
+          </p>
+          <p className="player-style">
+            {props.player.people && props.player.people.map(ht => ht.height)}{" "}
+            {props.player.people && props.player.people.map(wt => wt.weight)}{" "}
+            lbs
+          </p>
+          <p className="player-style">
+            Age:{" "}
+            {props.player.people &&
+              props.player.people.map(age => age.currentAge)}{" "}
+            | Born:{" "}
+            {props.player.people &&
+              props.player.people.map(bd => birth(bd.birthDate))}
+          </p>
+          <p className="player-style">
+            Birthplace:{" "}
+            {props.player.people &&
+              props.player.people.map(city => city.birthCity)}
+            ,{" "}
+            {props.player.people &&
+              props.player.people.map(state => state.birthStateProvince)}{" "}
+            {props.player.people &&
+              props.player.people.map(country => country.birthCountry)}
+          </p>
+        </div>
+        <div>{table}</div>
+      </div>
+    );
 }
 
 
