@@ -68,8 +68,6 @@ const Player = (props) => {
 
     let table;
     let position = (props.player.people && props.player.people.map(pos => (pos.primaryPosition.type)))
-    // console.log(props.player.people && props.player.people.map(pos => (pos.primaryPosition.type)))
-    // console.log(position = "Goalie")
     if (position == "Goalie"){
         table =  <Table bordered hover responsive style={tableStyle} className="table-style">
         <thead>
