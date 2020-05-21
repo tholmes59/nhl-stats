@@ -10,12 +10,12 @@ const NavBar = () => {
     overflow: "hidden",
     display: "flex",
     justifyContent: "space-between",
-    alignItems: "center"
+    alignItems: "center",
   };
 
   const logo = {
     display: "inline-block",
-    verticalAlign: "middle"
+    verticalAlign: "middle",
   };
 
   const img = {
@@ -23,7 +23,7 @@ const NavBar = () => {
     height: "8vh",
     marginTop: "-10px",
     marginBottom: "-20px",
-    objectFit: "contain"
+    objectFit: "contain",
   };
 
   const navLinks = {
@@ -32,14 +32,14 @@ const NavBar = () => {
     justifyContent: "space-between",
     alignItems: "center",
     paddingRight: "1px",
-    fontSize: "1.3vmin"
+    fontSize: "1.3vmin",
   };
 
   const navItem = {
     display: "inline-block",
     padding: "10px 20px 0",
     textDecoration: "none",
-    color: "white"
+    color: "white",
   };
 
   return (
